@@ -1,0 +1,965 @@
+var childObesity = {
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.198857,39.95852 ]
+    },
+    "properties": {
+    "Zipcode":19104,
+    "White":5,
+    "African_American":12,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":0,
+    "Average_Income":17.5,
+    "Count_Zip":10,
+    "Less_HS":2,
+    "HS_Graduate":5,
+    "Tech_Trade":0,
+    "Some_College":4,
+    "College_Graduate":4,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.080176,40.060612 ]
+    },
+    "properties": {
+    "Zipcode":19111,
+    "White":45,
+    "African_American":14,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":2,
+    "Average_Income":19.963636364,
+    "Count_Zip":55,
+    "Less_HS":2,
+    "HS_Graduate":14,
+    "Tech_Trade":4,
+    "Some_College":9,
+    "College_Graduate":24,
+    "Post_Graduate":12
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.000162,40.069399 ]
+    },
+    "properties": {
+    "Zipcode":19114,
+    "White":32,
+    "African_American":0,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":1,
+    "Average_Income":20.678571429,
+    "Count_Zip":28,
+    "Less_HS":2,
+    "HS_Graduate":10,
+    "Tech_Trade":0,
+    "Some_College":10,
+    "College_Graduate":10,
+    "Post_Graduate":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.042868,40.090698 ]
+    },
+    "properties": {
+    "Zipcode":19115,
+    "White":17,
+    "African_American":2,
+    "Asian":2,
+    "American_Indian":"1",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":0,
+    "Average_Income":21.8,
+    "Count_Zip":20,
+    "Less_HS":1,
+    "HS_Graduate":4,
+    "Tech_Trade":1,
+    "Some_College":4,
+    "College_Graduate":12,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.013276,40.115569 ]
+    },
+    "properties": {
+    "Zipcode":19116,
+    "White":22,
+    "African_American":0,
+    "Asian":2,
+    "American_Indian":"0",
+    "Biracial_Multiracial":4,
+    "Hispanic_Latino":1,
+    "Average_Income":20,
+    "Count_Zip":29,
+    "Less_HS":0,
+    "HS_Graduate":7,
+    "Tech_Trade":1,
+    "Some_College":9,
+    "College_Graduate":5,
+    "Post_Graduate":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.211217,40.073872 ]
+    },
+    "properties": {
+    "Zipcode":19118,
+    "White":14,
+    "African_American":1,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":0,
+    "Hispanic_Latino":0,
+    "Average_Income":23.923076923,
+    "Count_Zip":13,
+    "Less_HS":0,
+    "HS_Graduate":0,
+    "Tech_Trade":0,
+    "Some_College":0,
+    "College_Graduate":6,
+    "Post_Graduate":9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.191112,40.053348 ]
+    },
+    "properties": {
+    "Zipcode":19119,
+    "White":17,
+    "African_American":18,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":3,
+    "Hispanic_Latino":0,
+    "Average_Income":21.257142857,
+    "Count_Zip":35,
+    "Less_HS":0,
+    "HS_Graduate":3,
+    "Tech_Trade":0,
+    "Some_College":4,
+    "College_Graduate":11,
+    "Post_Graduate":20
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.119198,40.034147 ]
+    },
+    "properties": {
+    "Zipcode":19120,
+    "White":5,
+    "African_American":32,
+    "Asian":2,
+    "American_Indian":"0",
+    "Biracial_Multiracial":3,
+    "Hispanic_Latino":5,
+    "Average_Income":15.190476191,
+    "Count_Zip":42,
+    "Less_HS":3,
+    "HS_Graduate":16,
+    "Tech_Trade":4,
+    "Some_College":11,
+    "College_Graduate":9,
+    "Post_Graduate":6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.17912,39.98198 ]
+    },
+    "properties": {
+    "Zipcode":19121,
+    "White":0,
+    "African_American":19,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":0,
+    "Average_Income":10.473684211,
+    "Count_Zip":19,
+    "Less_HS":5,
+    "HS_Graduate":5,
+    "Tech_Trade":1,
+    "Some_College":9,
+    "College_Graduate":1,
+    "Post_Graduate":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.145899,39.977746 ]
+    },
+    "properties": {
+    "Zipcode":19122,
+    "White":0,
+    "African_American":8,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":3,
+    "Average_Income":12.909090909,
+    "Count_Zip":11,
+    "Less_HS":0,
+    "HS_Graduate":5,
+    "Tech_Trade":1,
+    "Some_College":3,
+    "College_Graduate":2,
+    "Post_Graduate":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.145802,39.964489 ]
+    },
+    "properties": {
+    "Zipcode":19123,
+    "White":3,
+    "African_American":6,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":0,
+    "Average_Income":19.8,
+    "Count_Zip":10,
+    "Less_HS":0,
+    "HS_Graduate":3,
+    "Tech_Trade":0,
+    "Some_College":3,
+    "College_Graduate":3,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.092814,40.017119 ]
+    },
+    "properties": {
+    "Zipcode":19124,
+    "White":9,
+    "African_American":18,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":6,
+    "Hispanic_Latino":8,
+    "Average_Income":14.648648649,
+    "Count_Zip":37,
+    "Less_HS":2,
+    "HS_Graduate":21,
+    "Tech_Trade":5,
+    "Some_College":8,
+    "College_Graduate":2,
+    "Post_Graduate":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.125105,39.976249 ]
+    },
+    "properties": {
+    "Zipcode":19125,
+    "White":16,
+    "African_American":2,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":1,
+    "Average_Income":17.4375,
+    "Count_Zip":16,
+    "Less_HS":2,
+    "HS_Graduate":7,
+    "Tech_Trade":0,
+    "Some_College":3,
+    "College_Graduate":7,
+    "Post_Graduate":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.13756,40.05539 ]
+    },
+    "properties": {
+    "Zipcode":19126,
+    "White":1,
+    "African_American":8,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":0,
+    "Average_Income":19.777777778,
+    "Count_Zip":9,
+    "Less_HS":0,
+    "HS_Graduate":0,
+    "Tech_Trade":0,
+    "Some_College":2,
+    "College_Graduate":5,
+    "Post_Graduate":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.227934,40.048483 ]
+    },
+    "properties": {
+    "Zipcode":19128,
+    "White":21,
+    "African_American":1,
+    "Asian":2,
+    "American_Indian":"0",
+    "Biracial_Multiracial":3,
+    "Hispanic_Latino":1,
+    "Average_Income":21,
+    "Count_Zip":27,
+    "Less_HS":0,
+    "HS_Graduate":8,
+    "Tech_Trade":0,
+    "Some_College":2,
+    "College_Graduate":12,
+    "Post_Graduate":9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.176073,39.967935 ]
+    },
+    "properties": {
+    "Zipcode":19130,
+    "White":13,
+    "African_American":3,
+    "Asian":1,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":0,
+    "Average_Income":19.8,
+    "Count_Zip":15,
+    "Less_HS":1,
+    "HS_Graduate":0,
+    "Tech_Trade":0,
+    "Some_College":2,
+    "College_Graduate":7,
+    "Post_Graduate":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.217795,39.990184 ]
+    },
+    "properties": {
+    "Zipcode":19131,
+    "White":0,
+    "African_American":16,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":5,
+    "Hispanic_Latino":1,
+    "Average_Income":12.529411765,
+    "Count_Zip":17,
+    "Less_HS":2,
+    "HS_Graduate":4,
+    "Tech_Trade":2,
+    "Some_College":6,
+    "College_Graduate":5,
+    "Post_Graduate":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.170855,39.996262 ]
+    },
+    "properties": {
+    "Zipcode":19132,
+    "White":0,
+    "African_American":13,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":0,
+    "Hispanic_Latino":0,
+    "Average_Income":10.4,
+    "Count_Zip":10,
+    "Less_HS":1,
+    "HS_Graduate":6,
+    "Tech_Trade":1,
+    "Some_College":3,
+    "College_Graduate":1,
+    "Post_Graduate":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.141671,39.993092 ]
+    },
+    "properties": {
+    "Zipcode":19133,
+    "White":1,
+    "African_American":5,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":0,
+    "Hispanic_Latino":3,
+    "Average_Income":7.6666666667,
+    "Count_Zip":9,
+    "Less_HS":2,
+    "HS_Graduate":3,
+    "Tech_Trade":2,
+    "Some_College":1,
+    "College_Graduate":1,
+    "Post_Graduate":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.109091,39.989604 ]
+    },
+    "properties": {
+    "Zipcode":19134,
+    "White":22,
+    "African_American":5,
+    "Asian":0,
+    "American_Indian":"1",
+    "Biracial_Multiracial":6,
+    "Hispanic_Latino":11,
+    "Average_Income":12.725,
+    "Count_Zip":40,
+    "Less_HS":8,
+    "HS_Graduate":18,
+    "Tech_Trade":0,
+    "Some_College":9,
+    "College_Graduate":8,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.048534,40.02211 ]
+    },
+    "properties": {
+    "Zipcode":19135,
+    "White":24,
+    "African_American":4,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":3,
+    "Hispanic_Latino":3,
+    "Average_Income":16.586206897,
+    "Count_Zip":29,
+    "Less_HS":0,
+    "HS_Graduate":18,
+    "Tech_Trade":2,
+    "Some_College":5,
+    "College_Graduate":8,
+    "Post_Graduate":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.018555,40.039406 ]
+    },
+    "properties": {
+    "Zipcode":19136,
+    "White":31,
+    "African_American":1,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":1,
+    "Average_Income":18.814814815,
+    "Count_Zip":27,
+    "Less_HS":0,
+    "HS_Graduate":15,
+    "Tech_Trade":4,
+    "Some_College":6,
+    "College_Graduate":5,
+    "Post_Graduate":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.071978,39.993096 ]
+    },
+    "properties": {
+    "Zipcode":19137,
+    "White":6,
+    "African_American":1,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":0,
+    "Average_Income":13.857142857,
+    "Count_Zip":7,
+    "Less_HS":0,
+    "HS_Graduate":5,
+    "Tech_Trade":0,
+    "Some_College":0,
+    "College_Graduate":2,
+    "Post_Graduate":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.159048,40.056002 ]
+    },
+    "properties": {
+    "Zipcode":19138,
+    "White":0,
+    "African_American":28,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":3,
+    "Hispanic_Latino":0,
+    "Average_Income":16.153846154,
+    "Count_Zip":26,
+    "Less_HS":2,
+    "HS_Graduate":7,
+    "Tech_Trade":0,
+    "Some_College":11,
+    "College_Graduate":8,
+    "Post_Graduate":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.229334,39.961352 ]
+    },
+    "properties": {
+    "Zipcode":19139,
+    "White":1,
+    "African_American":25,
+    "Asian":0,
+    "American_Indian":"1",
+    "Biracial_Multiracial":4,
+    "Hispanic_Latino":0,
+    "Average_Income":11.230769231,
+    "Count_Zip":26,
+    "Less_HS":2,
+    "HS_Graduate":13,
+    "Tech_Trade":1,
+    "Some_College":6,
+    "College_Graduate":6,
+    "Post_Graduate":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.145495,40.012177 ]
+    },
+    "properties": {
+    "Zipcode":19140,
+    "White":1,
+    "African_American":16,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":4,
+    "Hispanic_Latino":7,
+    "Average_Income":8.9583333333,
+    "Count_Zip":24,
+    "Less_HS":6,
+    "HS_Graduate":9,
+    "Tech_Trade":1,
+    "Some_College":12,
+    "College_Graduate":1,
+    "Post_Graduate":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.145697,40.037574 ]
+    },
+    "properties": {
+    "Zipcode":19141,
+    "White":0,
+    "African_American":14,
+    "Asian":0,
+    "American_Indian":"1",
+    "Biracial_Multiracial":2,
+    "Hispanic_Latino":1,
+    "Average_Income":15.466666667,
+    "Count_Zip":15,
+    "Less_HS":0,
+    "HS_Graduate":8,
+    "Tech_Trade":1,
+    "Some_College":7,
+    "College_Graduate":1,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.233279,39.921752 ]
+    },
+    "properties": {
+    "Zipcode":19142,
+    "White":2,
+    "African_American":20,
+    "Asian":2,
+    "American_Indian":"0",
+    "Biracial_Multiracial":5,
+    "Hispanic_Latino":0,
+    "Average_Income":13.652173913,
+    "Count_Zip":23,
+    "Less_HS":1,
+    "HS_Graduate":11,
+    "Tech_Trade":1,
+    "Some_College":10,
+    "College_Graduate":4,
+    "Post_Graduate":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.225905,39.942579 ]
+    },
+    "properties": {
+    "Zipcode":19143,
+    "White":6,
+    "African_American":33,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":0,
+    "Average_Income":15.852941177,
+    "Count_Zip":34,
+    "Less_HS":4,
+    "HS_Graduate":9,
+    "Tech_Trade":0,
+    "Some_College":14,
+    "College_Graduate":7,
+    "Post_Graduate":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.174075,40.033858 ]
+    },
+    "properties": {
+    "Zipcode":19144,
+    "White":10,
+    "African_American":31,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":8,
+    "Hispanic_Latino":0,
+    "Average_Income":16.255319149,
+    "Count_Zip":47,
+    "Less_HS":1,
+    "HS_Graduate":12,
+    "Tech_Trade":1,
+    "Some_College":11,
+    "College_Graduate":9,
+    "Post_Graduate":16
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.198265,39.909857 ]
+    },
+    "properties": {
+    "Zipcode":19145,
+    "White":12,
+    "African_American":12,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":5,
+    "Hispanic_Latino":0,
+    "Average_Income":15.807692308,
+    "Count_Zip":26,
+    "Less_HS":2,
+    "HS_Graduate":7,
+    "Tech_Trade":0,
+    "Some_College":13,
+    "College_Graduate":5,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.184146,39.939496 ]
+    },
+    "properties": {
+    "Zipcode":19146,
+    "White":11,
+    "African_American":11,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":5,
+    "Hispanic_Latino":0,
+    "Average_Income":17.52631579,
+    "Count_Zip":19,
+    "Less_HS":0,
+    "HS_Graduate":6,
+    "Tech_Trade":0,
+    "Some_College":6,
+    "College_Graduate":9,
+    "Post_Graduate":6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.152489,39.935327 ]
+    },
+    "properties": {
+    "Zipcode":19147,
+    "White":14,
+    "African_American":4,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":0,
+    "Hispanic_Latino":1,
+    "Average_Income":22.733333333,
+    "Count_Zip":15,
+    "Less_HS":0,
+    "HS_Graduate":2,
+    "Tech_Trade":1,
+    "Some_College":2,
+    "College_Graduate":7,
+    "Post_Graduate":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.151475,39.911612 ]
+    },
+    "properties": {
+    "Zipcode":19148,
+    "White":25,
+    "African_American":3,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":2,
+    "Average_Income":16.464285714,
+    "Count_Zip":28,
+    "Less_HS":2,
+    "HS_Graduate":14,
+    "Tech_Trade":0,
+    "Some_College":7,
+    "College_Graduate":4,
+    "Post_Graduate":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.065768,40.037722 ]
+    },
+    "properties": {
+    "Zipcode":19149,
+    "White":24,
+    "African_American":12,
+    "Asian":2,
+    "American_Indian":"0",
+    "Biracial_Multiracial":6,
+    "Hispanic_Latino":4,
+    "Average_Income":17.225,
+    "Count_Zip":40,
+    "Less_HS":5,
+    "HS_Graduate":15,
+    "Tech_Trade":3,
+    "Some_College":13,
+    "College_Graduate":9,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.171824,40.072495 ]
+    },
+    "properties": {
+    "Zipcode":19150,
+    "White":0,
+    "African_American":21,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":3,
+    "Hispanic_Latino":1,
+    "Average_Income":19.5,
+    "Count_Zip":22,
+    "Less_HS":0,
+    "HS_Graduate":2,
+    "Tech_Trade":0,
+    "Some_College":10,
+    "College_Graduate":9,
+    "Post_Graduate":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.257036,39.979570 ]
+    },
+    "properties": {
+    "Zipcode":19151,
+    "White":1,
+    "African_American":27,
+    "Asian":0,
+    "American_Indian":"1",
+    "Biracial_Multiracial":5,
+    "Hispanic_Latino":0,
+    "Average_Income":15.636363636,
+    "Count_Zip":33,
+    "Less_HS":2,
+    "HS_Graduate":6,
+    "Tech_Trade":2,
+    "Some_College":7,
+    "College_Graduate":12,
+    "Post_Graduate":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.046985,40.060946 ]
+    },
+    "properties": {
+    "Zipcode":19152,
+    "White":20,
+    "African_American":1,
+    "Asian":1,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":0,
+    "Average_Income":22.090909091,
+    "Count_Zip":22,
+    "Less_HS":0,
+    "HS_Graduate":6,
+    "Tech_Trade":1,
+    "Some_College":4,
+    "College_Graduate":7,
+    "Post_Graduate":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.229648,39.893446 ]
+    },
+    "properties": {
+    "Zipcode":19153,
+    "White":2,
+    "African_American":10,
+    "Asian":0,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":1,
+    "Average_Income":18.8,
+    "Count_Zip":10,
+    "Less_HS":1,
+    "HS_Graduate":3,
+    "Tech_Trade":0,
+    "Some_College":3,
+    "College_Graduate":5,
+    "Post_Graduate":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.983217,40.096483 ]
+    },
+    "properties": {
+    "Zipcode":19154,
+    "White":39,
+    "African_American":3,
+    "Asian":1,
+    "American_Indian":"0",
+    "Biracial_Multiracial":1,
+    "Hispanic_Latino":2,
+    "Average_Income":21.085714286,
+    "Count_Zip":35,
+    "Less_HS":1,
+    "HS_Graduate":12,
+    "Tech_Trade":1,
+    "Some_College":9,
+    "College_Graduate":15,
+    "Post_Graduate":8
+    }
+  }
+]
+}
