@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Childhood Obesity</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+             background-image: linear-gradient(to bottom, white , #f9edd6);
+            font-family: Lato, sans-serif;
+            color: #0D0000;
+        }
+        header {
+            padding: 6px 10%;
+        }
+        h1 {
+            display: inline-block;
+            margin-right: 20px;
+            color: darkgreen;
+            text-align: center
+        }
+        
+        
+        h2 {
+            display: inline-block;
+            color: #001323;
+            font-size: 1em;
+            
+        }
+        
+        #map {
+            width: 80%;
+            height: 900px;
+            margin: 10px auto;
+        }
+        footer {
+            padding: 6px 10%;
+            width: 80%;
+        }
+        p {
+            font-size: 1em;
+            color: #001323;
+        }
+        
+        div.a {
+            text-align: center
+        }
+        
+        .leaflet-popup-content-wrapper{
+        background-color: whitesmoke;
+        opacity: 0.9;
+    }
+/*        <m style="text-align: center">*/
+     
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mapping Respondent's Socioeconomic Factors and Child's Body Mass Indexes </h1>
+        <h2><i>Reporting the 2014/2015 Southeastern <br> Pennsylvania Household Health Survey </i></h2>
+    </header>
+
+    <div id='map'></div>
+    
+
+    <footer>
+        <p>Map Notes:</p>
+        <p>Circle size is representative of the amount of respondents per ZIPCODE.</p>
+        <p>Some ZIP Codes have been excluded from the map as there were fewer than 5 respondents which led to misrepresented data for the entire ZIP Code.</p>
+        <p>There were a total of 1,156 Philadelphia respondents in the survey, although not every respondent answered all the questions.</p>
+        <p>Map authored by Michael Borowski</p>
+    </footer>
+
+    <script src="ChildObesity.geojson"></script>
+    <script src="Zipcodes_Poly.geojson"></script>
+
+    
+    <script> 
+        
+    
+
+       var map = L.map('map', {
+          center: [40.041,-75.121],
+          zoom: 11,
+           maxZoom:12,
+           minZoom: 10
+      });
+        
+      
+      var tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+});
+      
+      tiles.addTo(map);
+        
+ var logo = L.control({position: 'bottomright'});
+    logo.onAdd = function(map){
+        var div = L.DomUtil.create('div', 'myclass');
+        div.innerHTML= "<img src='Legend3.JPG' width=100/>";
+        return div;
+    }
+    logo.addTo(map);  
+
+
+var geojson = L.geoJson(zips, {
+            style: style
+            //onEachFeature: onEachFeature,
+        }).addTo(map);
+    
+ function style(feature) {
+        console.log(feature.properties.OBJECTID);
+        if (feature.properties.OBJECTID == 47) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+      else if (feature.properties.OBJECTID == 30) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+      else if (feature.properties.OBJECTID == 9) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+     else if (feature.properties.OBJECTID == 16) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+     else if (feature.properties.OBJECTID == 18) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+            //    dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+    else if (feature.properties.OBJECTID == 24) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+      else if (feature.properties.OBJECTID == 20) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+      if (feature.properties.OBJECTID == 37) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'green'
+            };    
+        }
+     
+     
+     else if (feature.properties.OBJECTID == 28) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 44) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 22) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 23) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 32) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 26) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 21) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 35) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+            //    dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#58e03a'
+            }; 
+        } 
+     
+          
+     else if (feature.properties.OBJECTID == 45) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 46) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+            //    dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 48) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 25) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 38) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 31) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 39) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 43) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: 'yellow'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 27) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 19) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 36) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+             //   dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 41) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 4) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 3) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 12) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+      else if (feature.properties.OBJECTID == 5) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.9,
+                fillColor: '#fca40c'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 1) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 40) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 2) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 6) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 34) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 33) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 7) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+              //  dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else if (feature.properties.OBJECTID == 42) {
+            return {
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                //dashArray: '3',
+                fillOpacity: 0.8,
+                fillColor: 'red'
+            }; 
+        } 
+     
+     else {
+            return {
+                weight: 2,
+                opacity: .1,
+                color: 'white',
+               // dashArray: '3',
+                fillOpacity: 0.3,
+                fillColor: 'white'
+            };
+        }
+    };
+
+
+    
+var fiveToten = L.geoJson(ChildObesity, {
+        pointToLayer: function(feature, coordinates) {
+            console.log(feature.properties.Count_Zip)
+            return L.circleMarker(coordinates, { 
+                color: 'white',
+                weight: 2,
+                fillColor: 'purple',
+                fillOpacity: .8,
+                radius: 3
+            })
+        },
+    
+    filter: function(feature, layer) {
+    if(feature.properties.Count_Zip >= "5" && feature.properties.Count_Zip <= "10") {
+    return feature;
+};
+},
+    
+     onEachFeature : function(feature,layer) {
+          layer.on('mouseover', function() {
+            layer.setStyle({
+                fillColor: 'white'
+            });
+        });
+         layer.on('mouseout', function() {
+         layer.setStyle({
+             fillColor: 'purple'
+         });
+     });
+   
+          
+          var name = feature.properties.Zipcode
+                                                
+          
+          var popup = ("<b><center><u><h3 style='color: Black'>"+name+"</b><br></center></u></h3>" + "<b><h3 style='color: blue'>Number of Respondents - </b></h3>" + feature.properties.Count_Zip +"<br>" + "<b><h3 style='color: blue'>Average Respondent Household Income - </b><br></h3>" + feature.properties.Average_Income + "<br>" + "<b><h3 style='color: blue'>Child's Race Amounts - <br></b></h3>" + "White: " + feature.properties.White +"<br>" + "African American: " + feature.properties.African_American + "<br>" + "Asian: " + feature.properties.Asian + "<br>" + "American Indian: " + feature.properties.American_Indian + "<br>" + "Biracial or Multiracial: " + feature.properties.Biracial_Multiracial + "<br>" + "Hispanic or Latino: " + feature.properties.Hispanic_Latino + "<br><b><h3 style='color: blue'> Respondent's Highest Education Level - </h3></b>" + "Less than High School: " + feature.properties.Less_HS + "<br> High School Graduate: " + feature.properties.HS_Graduate + "<br> Technical or Trade School after High School: " + feature.properties.Tech_Trade + "<br> Some College: " + feature.properties.Some_College + "<br> College Graduate: " + feature.properties.College_Graduate + "<br> Post-Graduate: " + feature.properties.Post_Graduate + "<br><h3 style='color: blue'> Child's Average Body Mass Index - </h3>" + feature.properties.Child_BMI)
+                       layer.bindPopup(popup)
+          }
+    
+    
+}).addTo(map);
+        
+        
+
+var elevenTofifteen = L.geoJson(ChildObesity, {
+        pointToLayer: function(feature, coordinates) {
+           console.log(feature.properties.Count_Zip)
+            return L.circleMarker(coordinates, { 
+                color: 'white',
+                weight: 2,
+                fillColor: 'purple',
+                fillOpacity: .8,
+                radius: 5
+            })
+        },
+    
+    filter: function(feature, layer) {
+    if(feature.properties.Count_Zip >= "11" && feature.properties.Count_Zip <= "15") {
+    return feature;
+};
+},
+     onEachFeature : function(feature,layer) {
+           layer.on('mouseover', function() {
+            layer.setStyle({
+                fillColor: 'white'
+            });
+        });
+         layer.on('mouseout', function() {
+         layer.setStyle({
+             fillColor: 'purple'
+         });
+     });
+   
+   
+          
+          var name = feature.properties.Zipcode
+                                                
+          
+          var popup = ("<b><center><u><h3 style='color: Black'>"+name+"</b><br></center></u></h3>" + "<b><h3 style='color: blue'>Number of Respondents - </b></h3>" + feature.properties.Count_Zip +"<br>" + "<b><h3 style='color: blue'>Average Respondent Household Income - </b><br></h3>" + feature.properties.Average_Income + "<br>" + "<b><h3 style='color: blue'>Child's Race Amounts - <br></b></h3>" + "White: " + feature.properties.White +"<br>" + "African American: " + feature.properties.African_American + "<br>" + "Asian: " + feature.properties.Asian + "<br>" + "American Indian: " + feature.properties.American_Indian + "<br>" + "Biracial or Multiracial: " + feature.properties.Biracial_Multiracial + "<br>" + "Hispanic or Latino: " + feature.properties.Hispanic_Latino + "<br><b><h3 style='color: blue'> Respondent's Highest Education Level - </h3></b>" + "Less than High School: " + feature.properties.Less_HS + "<br> High School Graduate: " + feature.properties.HS_Graduate + "<br> Technical or Trade School after High School: " + feature.properties.Tech_Trade + "<br> Some College: " + feature.properties.Some_College + "<br> College Graduate: " + feature.properties.College_Graduate + "<br> Post-Graduate: " + feature.properties.Post_Graduate + "<br><h3 style='color: blue'> Child's Average Body Mass Index - </h3>" + feature.properties.Child_BMI)
+                       layer.bindPopup(popup)
+          }
+    
+    
+}).addTo(map);
+        
+        
+        
+var sixteenTotwentfour = L.geoJson(ChildObesity, {
+        pointToLayer: function(feature, coordinates) {
+           console.log(feature.properties.Count_Zip)
+            return L.circleMarker(coordinates, { 
+                color: 'white',
+                weight: 2,
+                fillColor: 'purple',
+                fillOpacity: .8,
+                radius: 7
+            })
+        },
+    
+    filter: function(feature, layer) {
+    if(feature.properties.Count_Zip >= "16" && feature.properties.Count_Zip <= "24") {
+    return feature;
+};
+},
+     onEachFeature : function(feature,layer) {
+           layer.on('mouseover', function() {
+            layer.setStyle({
+                fillColor: 'white'
+            });
+        });
+         layer.on('mouseout', function() {
+         layer.setStyle({
+             fillColor: 'purple'
+         });
+     });
+   
+   
+          
+          var name = feature.properties.Zipcode
+                                                
+          
+          var popup = ("<b><center><u><h3 style='color: Black'>"+name+"</b><br></center></u></h3>" + "<b><h3 style='color: blue'>Number of Respondents - </b></h3>" + feature.properties.Count_Zip +"<br>" + "<b><h3 style='color: blue'>Average Respondent Household Income - </b><br></h3>" + feature.properties.Average_Income + "<br>" + "<b><h3 style='color: blue'>Child's Race Amounts - <br></b></h3>" + "White: " + feature.properties.White +"<br>" + "African American: " + feature.properties.African_American + "<br>" + "Asian: " + feature.properties.Asian + "<br>" + "American Indian: " + feature.properties.American_Indian + "<br>" + "Biracial or Multiracial: " + feature.properties.Biracial_Multiracial + "<br>" + "Hispanic or Latino: " + feature.properties.Hispanic_Latino + "<br><b><h3 style='color: blue'> Respondent's Highest Education Level - </h3></b>" + "Less than High School: " + feature.properties.Less_HS + "<br> High School Graduate: " + feature.properties.HS_Graduate + "<br> Technical or Trade School after High School: " + feature.properties.Tech_Trade + "<br> Some College: " + feature.properties.Some_College + "<br> College Graduate: " + feature.properties.College_Graduate + "<br> Post-Graduate: " + feature.properties.Post_Graduate + "<br><h3 style='color: blue'> Child's Average Body Mass Index - </h3>" + feature.properties.Child_BMI)
+                       layer.bindPopup(popup)
+          }
+    
+}).addTo(map);
+        
+        
+        
+        
+var twentfiveTothirtone = L.geoJson(ChildObesity, {
+        pointToLayer: function(feature, coordinates) {
+           console.log(feature.properties.Count_Zip)
+            return L.circleMarker(coordinates, { 
+                color: 'white',
+                weight: 2,
+                fillColor: 'purple',
+                fillOpacity: .8,
+                radius: 9
+            })
+        },
+    
+    filter: function(feature, layer) {
+    if(feature.properties.Count_Zip >= "25" && feature.properties.Count_Zip <= "31") {
+    return feature;
+};
+},
+    
+     onEachFeature : function(feature,layer) {
+      layer.on('mouseover', function() {
+            layer.setStyle({
+                fillColor: 'white'
+            });
+        });
+         layer.on('mouseout', function() {
+         layer.setStyle({
+             fillColor: 'purple'
+         });
+     });
+   
+          
+          var name = feature.properties.Zipcode
+                                                
+          
+          var popup = ("<b><center><u><h3 style='color: Black'>"+name+"</b><br></center></u></h3>" + "<b><h3 style='color: blue'>Number of Respondents - </b></h3>" + feature.properties.Count_Zip +"<br>" + "<b><h3 style='color: blue'>Average Respondent Household Income - </b><br></h3>" + feature.properties.Average_Income + "<br>" + "<b><h3 style='color: blue'>Child's Race Amounts - <br></b></h3>" + "White: " + feature.properties.White +"<br>" + "African American: " + feature.properties.African_American + "<br>" + "Asian: " + feature.properties.Asian + "<br>" + "American Indian: " + feature.properties.American_Indian + "<br>" + "Biracial or Multiracial: " + feature.properties.Biracial_Multiracial + "<br>" + "Hispanic or Latino: " + feature.properties.Hispanic_Latino + "<br><b><h3 style='color: blue'> Respondent's Highest Education Level - </h3></b>" + "Less than High School: " + feature.properties.Less_HS + "<br> High School Graduate: " + feature.properties.HS_Graduate + "<br> Technical or Trade School after High School: " + feature.properties.Tech_Trade + "<br> Some College: " + feature.properties.Some_College + "<br> College Graduate: " + feature.properties.College_Graduate + "<br> Post-Graduate: " + feature.properties.Post_Graduate + "<br><h3 style='color: blue'> Child's Average Body Mass Index - </h3>" + feature.properties.Child_BMI)
+                       layer.bindPopup(popup)
+          }
+    
+}).addTo(map);
+        
+        
+        
+        
+        
+        
+var thirttwoTofourtseven = L.geoJson(ChildObesity, {
+        pointToLayer: function(feature, coordinates) {
+           console.log(feature.properties.Count_Zip)
+            return L.circleMarker(coordinates, { 
+                color: 'white',
+                weight: 2,
+                fillColor: 'purple',
+                fillOpacity: .8,
+                radius: 10.5
+            })
+        },
+    
+    
+    filter: function(feature, layer) {
+    if(feature.properties.Count_Zip >= "32" && feature.properties.Count_Zip <= "75") {
+    return feature;
+};
+},
+     onEachFeature : function(feature,layer) { 
+         layer.on('mouseover', function() {
+            layer.setStyle({
+                fillColor: 'white'
+            });
+        });
+         layer.on('mouseout', function() {
+         layer.setStyle({
+             fillColor: 'purple'
+         });
+     });
+   
+          
+          var name = feature.properties.Zipcode
+                                                
+          
+          var popup = ("<b><center><u><h3 style='color: Black'>"+name+"</b><br></center></u></h3>" + "<b><h3 style='color: blue'>Number of Respondents - </b></h3>" + feature.properties.Count_Zip +"<br>" + "<b><h3 style='color: blue'>Average Respondent Household Income - </b><br></h3>" + feature.properties.Average_Income + "<br>" + "<b><h3 style='color: blue'>Child's Race Amounts - <br></b></h3>" + "White: " + feature.properties.White +"<br>" + "African American: " + feature.properties.African_American + "<br>" + "Asian: " + feature.properties.Asian + "<br>" + "American Indian: " + feature.properties.American_Indian + "<br>" + "Biracial or Multiracial: " + feature.properties.Biracial_Multiracial + "<br>" + "Hispanic or Latino: " + feature.properties.Hispanic_Latino + "<br><b><h3 style='color: blue'> Respondent's Highest Education Level - </h3></b>" + "Less than High School: " + feature.properties.Less_HS + "<br> High School Graduate: " + feature.properties.HS_Graduate + "<br> Technical or Trade School after High School: " + feature.properties.Tech_Trade + "<br> Some College: " + feature.properties.Some_College + "<br> College Graduate: " + feature.properties.College_Graduate + "<br> Post-Graduate: " + feature.properties.Post_Graduate + "<br><h3 style='color: blue'> Child's Average Body Mass Index - </h3>" + feature.properties.Child_BMI)
+                       layer.bindPopup(popup)
+                    
+          }
+    
+}).addTo(map);
+            
+     var sourcesLayers = {
+   "<b style='radius: 3'>5 - 10 Respondents</b>": fiveToten,
+  "<b style='radius: 5'>11 - 15 Respondents</b>": elevenTofifteen,
+  "<b style='radius: 7'>16 - 24 Respondents</b>": sixteenTotwentfour,
+     "<b style='radius: 9'>25 - 31 Respondents</b>": twentfiveTothirtone,
+      "<b style='radius: 10.5'>32+ Respondents</b>": thirttwoTofourtseven,
+     "<b style='fillcolor:green'>Child BMI Choropleth</b>": geojson}
+
+L.control.layers(null, sourcesLayers, { collapsed:true}).addTo(map);  
+        
+  
+      
+     
+ 
+        
+        
+        
+    </script>
+    
+</body>
+
+</html>
